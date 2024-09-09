@@ -1,46 +1,28 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="h-100">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="" />
-    <meta name="author" content="André Almeida" />
-    <title>Vila do Cashback</title>
-    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
-    <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="./assets/css/style.css" rel="stylesheet" />
-  </head>
-  <body class="d-flex h-100 text-center text-white bg-dark">
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-      <header class="mb-auto text-white">
-        <div>
-          <h3 class="float-md-start mb-0">Vila do Cashback</h3>
-          <nav class="nav nav-masthead justify-content-center float-md-end">
-            <a class="nav-link active" aria-current="page" href="index.html"
-              >Home</a
-            >
-            <a class="nav-link" href="privacy-policy.html"
-              >Policita de Privacidade</a
-            >
-            <a class="nav-link" href="terms-of-usage.html">Termos de Uso</a>
-          </nav>
-        </div>
-      </header>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vila do Cashback - Redirecionamento: App Download</title>
+  <script>
+    window.onload = function() {
+      var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
-      <main class="px-3">
-        <h1>Fa&ccedil;a parte da sua comunidade!</h1>
-        <!-- <p class="lead">
-          Tem interesse em conhecer o que a Vila do Cashback pode fazer por
-          você? Envie uma mensagem para nós que entraremos em contato assim que
-          possível.
-        </p> -->
-      </main>
-
-      <footer class="mt-auto text-white-50">
-        <p>
-          Copyright &copy; 2024 Vila do Cashback – Todos os direitos reservados.
-        </p>
-      </footer>
-    </div>
-  </body>
+      // Verifica se o dispositivo é iOS
+      if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        window.location.href = 'https://apps.apple.com/app/vila-do-cashback/id6498982945';
+      }
+      // Verifica se o dispositivo é Android
+      else if (/android/i.test(userAgent)) {
+        window.location.href = 'https://play.google.com/store/apps/details?id=com.viladocashback.app';
+      } else {
+        // Caso seja outro dispositivo, redirecionar para um site genérico ou página de suporte
+        window.location.href = 'https://www.viladocashback.com.br/'
+      }
+    };
+  </script>
+</head>
+<body>
+  <h1>Redirecionando...</h1>
+</body>
 </html>
