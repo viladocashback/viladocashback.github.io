@@ -33,15 +33,16 @@
       if (!!redirect) {
         window.location.href = redirect;
       }
-
-      var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-      if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-        window.location.href = 'https://apps.apple.com/app/vila-do-cashback/id6498982945';
-      }
-      else if (/android/i.test(userAgent)) {
-        window.location.href = 'https://play.google.com/store/apps/details?id=com.viladocashback.app';
-      } else {
-        window.location.href = 'https://www.viladocashback.com.br/'
+      else {
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+        if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+          window.location.href = 'https://apps.apple.com/app/vila-do-cashback/id6498982945';
+        }
+        else if (/android/i.test(userAgent)) {
+          window.location.href = 'https://play.google.com/store/apps/details?id=com.viladocashback.app';
+        } else {
+          window.location.href = 'https://www.viladocashback.com.br/'
+        }
       }
     };
   </script>
